@@ -1,0 +1,38 @@
+Default: "%server%"
+
+"login_lobby": "登录大厅"
+"lobby": "主大厅"
+"afk_lobby": "闲置大厅"
+
+"skyblock": "空岛生存"
+"skyblock_rpg": "空岛生存 - RPG"
+"skyblock_old": "空岛生存 - 未迁移服务器"
+"skyblock_test": "空岛生存 - 测试迁移服务器"
+"skyblock_slimefun": "粘液科技测试服务器"
+
+"bw_lobby": "起床战争大厅"
+
+"bw_1": "起床战争"
+"bw_2": "起床战争"
+"bw_3": "起床战争"
+"bw_4": "起床战争"
+
+"sw_lobby": "空岛战争大厅"
+
+"sw_1": "空岛战争"
+"sw_2": "空岛战争"
+
+"mm_lobby": "密室杀手大厅"
+"mm_1": "密室杀手"
+"mm_2": "密室杀手"
+"mm_3": "密室杀手"
+"mm_4": "密室杀手"
+"mm_5": "密室杀手"
+"mm_6": "密室杀手"
+"mm_7": "密室杀手"
+"mm_8": "密室杀手"
+
+"thepit_1": "天坑乱斗"
+"thepit_2": "天坑乱斗"
+"thepit_3": "天坑乱斗"
+"thepit_4": "天坑乱斗"

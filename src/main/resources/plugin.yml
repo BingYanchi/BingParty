@@ -1,0 +1,12 @@
+name: PartySystem
+main: cn.yistars.party.bukkit.Party
+version: ${project.version}
+author: Bing_Yanchi
+
+softdepend: [BedWars1058]
+
+commands:
+  party:
+    description: PartySystem.
+  partysystem:
+    description: PartySystem.

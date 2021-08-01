@@ -1,0 +1,92 @@
+# 菜单名称
+Name: "组队"
+
+# 组队类别
+Title: "&a组队"
+SubTitle: "&7创建队伍和其他玩家一起游戏"
+
+# 没有组队时显示的内容
+CreateTitle: "&a创建组队"
+CreateInfo: "&e点击此处邀请玩家加入你的组队"
+
+# 邀请铁砧
+InviteAnvilTitle: "邀请玩家进入你的组队"
+InviteAnvilText: "输入用户名"
+
+# 邀请玩家
+InviteTitle: "&a邀请玩家"
+InviteSubTitle: "&7邀请玩家加入你的队伍"
+
+# 删除玩家
+KickTitle: "&a删除玩家"
+KickSubTitle: "&7在队伍中移除一名玩家"
+
+# 传送组队
+WarpTitle: "&a传送组队"
+WarpSubTitle: "&7传送所有组队成员到你的大厅"
+
+# 解散组队
+DisbandTitle: "&a解散组队"
+DisbandSubTitle: "&7解散当前的组队"
+
+# 离开组队
+LeaveTitle: "&a离开组队"
+LeaveSubTitle: "&7离开当前的组队"
+
+# 排序
+SortTitle: "&a改变排序方式"
+SortCurrent: "&7当前排序方式: &b%sort%"
+SortOrder: "&7排列顺序: &b%order%"
+
+SortDefault: "默认"
+SortAz: "按字母顺序排列"
+SortLastTime: "最后上线时间"
+
+OrderDefault: "普通模式"
+OrderReverse: "倒序模式"
+
+SortDefaultInfo: "&b默认&7: 按字母顺序显示, 但优先显示在线玩家"
+SortAzInfo: "&b按字母顺序排列&7: 以字母顺序排列玩家"
+SortLastTimeInfo: "&b最后上线时间&7: 按最后在线时间排序"
+
+SortLeft: "&e左键点击 &7更改排序方式"
+SortRight: "&e右键点击 &7倒序显示"
+
+# 搜索玩家
+Search: "&a搜索玩家"
+SearchClear: "&a清空搜索结果"
+SearchNotFound: "&c无搜索结果"
+SerrchNotFoundInfo: "&7没有匹配‘%word%’的结果"
+
+# 铁砧信息 (Title 只在 1.14+ 生效)
+AnvilInviteTitle: "邀请玩家"
+AnvilInviteText: "输入玩家名"
+AnvilKickTitle: "删除玩家"
+AnvilKickText: "输入玩家名"
+AnvilSearchTitle: "搜索"
+AnvilSearchText: "搜索"
+
+# 成员信息
+MemberLevel: "&7等级: &6"
+MemberPoint: "&7成就点数: &e"
+MemberGuild: "&7公会: &b"
+
+MemberNull: "无"
+
+MemberStat: "&7在线状态: %stat%"
+MemberOnline: "&a在线"
+MemberOffline: "&c离线"
+MemberSever: "&7服务器: &b%server%"
+
+# 踢出组队
+KickPlayerTitle: "&a踢出组队"
+KickPlayerSubTitle: "&7点击此处将 %player% 从你的队伍中移除"
+KickNoLeaderSubTitle: "&7只有组队队长才能将玩家踢出组队"
+
+# 提升队长
+PromotePlayerTitle: "&a提升组队身份"
+PromotePlayerSubTitle: "&7点击此处将 %player% 组队身份提升"
+PromoteNoLeaderSubTitle: "&7你必须是组队队长才能使用"
+
+# 返回
+Back: "&a返回"

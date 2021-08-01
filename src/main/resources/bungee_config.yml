@@ -1,0 +1,32 @@
+# 调试模式
+DebugMode: false
+
+# 更新检查
+CheckUpdate: true
+
+# 组队邀请等待时间 (秒)
+PartyInviteWait: 120
+
+# 离线踢出组队时间 (分钟)
+OfflineKick: 5
+
+# 组队队长离线解散组队时间 (分钟)
+LeaderOfflineKick: 5
+
+# 服务器最大组队人数, 如果队伍大于, 队长会被拒绝加入
+# 添加的服务器只允许队长进入, 队长加入后队员会被拉入服务器
+# 所以请勿添加大厅服务器
+GameServer:
+  1:
+    - 'bw_4'
+  999:
+    - 'mm_1'
+    - 'mm_2'
+    - 'mm_3'
+    - 'mm_4'
+    - 'mm_5'
+
+# 禁用传送
+BlackWarp:
+  - 'login_lobby'
+  - 'afk_lobby'

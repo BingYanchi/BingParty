@@ -1,0 +1,165 @@
+# 插件运行
+Enabled: "Enabled successfully."
+Loaded: "Loaded successfully."
+Disenabled: "Disenabled successfully."
+
+# 设置为 "" 不发送消息
+# 玩家
+NoPermission: "&c无权操作"
+
+# 管理员
+Reload: "&a重载配置文件成功"
+Console: "此命令必须在游戏中执行."
+
+# 检查更新
+Checking: "&7正在检查更新..."
+NoUpdate: "&a当前使用的版本已是最新版本."
+Update: "&a[PartySystem] &e检测到新版本 &bv%new_version%&e, 当前版本: &bv%old_version%"
+UpdatePage: "&a插件页面: &e%url%"
+UpdateDownload: "&a下载地址: &e%url%"
+AutoDownload: "&a已启用自动下载, 已自动下载更新, 下次重启后生效"
+AutoDownloadFail: "&c已启用自动下载, 但更新下载失败, 请手动更新"
+
+# 进入游戏服务器
+PartyTooLarge: "&c你的组队人数过大, 该模式最多允许 %size% 名玩家"
+OnlyLeaderJoin: "&c只有组队队长才能将你传送进入游戏, 让他进入游戏, 或者使用命令 &b/party leave &c以离开组队"
+
+# 组队加入/离开
+PartyJoin: "&7%player% &e加入了组队"
+PartyLeave: "&7%player% &e离开了组队"
+
+# 组队权限拒绝类
+NoLeader: "&c你不是组队队长"
+NoPlayer: "&c未找到该玩家"
+NoInParty: "&c你当前不在组队中"
+NotInYourParty: "&c该玩家不在你的队伍中"
+YouAlreadyInParty: "&c你已经在另一个组队中了, 请先离开此组队以接受其他组队邀请"
+
+# 系统离线踢出
+PartyServerQuit: "&7%player% &e已断开连接, 若 &c%time% &e分钟内未重新连接则移出组队"
+PartyServerKick: "&7%player% &e已断开连接, 被移出你的组队"
+PartyLeaderServerQuit: "&e组队队长 &7%player% &e已断开连接, 若 &c%time% &e分钟内未重新连接则组队解散"
+PartyLeaderServerKick: "&c由于组队队长断开连接, 组队已解散"
+
+# 解散无人组队
+NoPlayerDisband: "&c所有邀请均已过期, 且组队中没有成员, 因此组队已被解散"
+
+# 组队身份
+Leader: "队长"
+Mod: "副队长"
+Member: "成员"
+
+# 管理员帮助
+AdminHelpTitle: "&aPartySystem v%version% 帮助信息:"
+AdminHelpHelp: "&a/partysystem help &8- &7查看帮助"
+AdminHelpCheck: "&a/partysystem check &8- &7检查更新"
+AdminHelpReload: "&a/partysystem reload &8- &7重载配置文件"
+
+# 格式类
+Line: "&9&m------------------------------"
+None: " "
+
+# 玩家帮助
+HelpTitle: "&6组队指令"
+HelpAccept: "&e/party accept <player> &8- &7同意来自玩家的组队邀请"
+HelpInvite: "&e/party invite (player...) &8- &7邀请其他玩家进入你的队伍"
+HelpList: "&e/party list &8- &7列出当前队伍包含的玩家"
+HelpLeave: "&e/party leave &8- &7离开你当前的队伍"
+HelpWarp: "&e/party warp &8- &7传送所有队伍成员进入你当前的服务器"
+HelpDisband: "&e/party disband &8- &7解散你的队伍"
+HelpPromote: "&e/party promote <player> &8- &7将其他队伍成员提升为队伍管理员"
+HelpDemote: "&e/party demote <player> &8- &7将其他队伍成员从队伍管理员降级为普通成员"
+HelpTransfer: "&e/party transfer <player> &8- &7将队伍转让给其他玩家"
+HelpKick: "&e/party kick <player> &8- &7将玩家移出队伍"
+HelpKickOffline: "&e/party kickoffline &8- &7将所有离线玩家移出队伍"
+HelpSettings: "&e/party settings <setting> &8- &7切换组队设置"
+HelpChat: "&e/party chat <message> &8- &7发送一条队伍消息"
+HelpMute: "&e/party mute &8- &7禁言队伍聊天, 仅限队长, 副队长, 工作人员可以使用"
+
+# 组队设置
+SettingTitle: "&6组队设置"
+SettingInvite: "&e/party setting allinvite &8- &7切换允许所有成员邀请其他玩家"
+SettingPrivate: "&e/party mute &8- &7切换组队是否全员禁言"
+
+# 用法
+UseAccept: "&c用法: /party accept <邀请者>"
+UseInvite: "&c用法: /party invite (玩家...)"
+UsePromote: "&c用法: /party promote <玩家名>"
+UseDemote: "&c用法: /party demote <玩家名>"
+UseTransfer: "&c用法: /party transfer <玩家名>"
+UseKick: "&c用法: /party kick <玩家名>"
+UseChat: "&c用法: /party chat <消息>"
+
+# 组队同意
+GetInviteInfo: "&7%player% &e邀请你加入其组队,"
+GetInvite: "&e你有 &c%time% &e秒时间接受. &6点击这里加入"
+GetInviteHonver: "点击执行指令 &e/party accept %player%"
+AlreadyOwnParty: "&c你已经在另一个队伍"
+NoPlayerInviter: "&c此玩家没有给你发送组队邀请"
+SuccessJoin: "&e你加入了 &7%player% &e的组队"
+SuccessJoinMember: "&e组队成员:&7%player%"
+
+# 组队邀请
+SuccessInvite: "&7%player% &e已邀请 &7%inviteplayer% &e到组队中, 他有 &c%time% &e秒时间接受邀请"
+AlreadyInParty: "&7%player% &e已经在组队中了"
+InviteExpired: "&e你发给 &7%player% &e的组队邀请已过期"
+PartyExpired: "&e来自 &7%player% &e的组队邀请已过期"
+NoInviteSelf: "&c你无法邀请自己"
+AlreadyInviter: "&7%player% &c已被被邀请加入组队"
+NoPermissionInvite: "&c你无权邀请其他玩家"
+
+# 组队成员
+PartyListTitle: "&6组队成员 (%number%)"
+PartyLeader: "&e队长:"
+PartyMod: "&e副队长:"
+PartyMember: "&e队员:"
+PartyOnline: "&a●"
+PartyOffline: "&c●"
+
+# 组队退出
+YouLeaveParty: "&e你离开了组队"
+PartyLeaderLeave: "&e由于 &7%player% &e离开了组队, 组队被移交给了 &7%leader%"
+
+# 组队传送
+SuccessWarp: "&e你将&7%player% &e传送到你的服务器"
+PartyWarp: "&e组队队长 &7%player% &e将你召唤到他的服务器"
+NoWarp: "&c此服务器不可进行传送"
+
+# 解散队伍
+PartyDisband: "&7%player% &e解散了组队"
+NoDisband: "&c你无权解散此组队"
+
+# 身份提拔
+RolePromote: "&7%player% &e已将 &7%roleplayer% &e提拔为组队%role%"
+RoleMod: "&7%player% &e现在为副队长"
+NoPromoteSelf: "&c你不能提拔自己"
+
+# 身份降职
+RoleDemote: "&7%player% &e已将 &7%roleplayer% &e降职为组队%role%"
+NoDemote: "&c你不能降职普通成员"
+NoDemoteSelf: "&c你不能降职自己"
+
+# 转让队伍
+SuccessTransfer: "&7%leader% &e将组队移交给了 &7%newleader%"
+
+# 组队踢出
+PlayerKicked: "&e你被 &7%player% &e踢出组队"
+PartyKick: "&7%player% &e已被移出组队"
+
+# 踢出离线
+NoKickOffline: "&c组队中没有离线的玩家可供移出"
+SuccessKick: "&e因为这些玩家离线, 已从组队移出了&7%player%&e."
+
+# 组队设置
+AllInvite: "所有成员邀请组队"
+EnableSetting: "&7%player% &a启用了 %setting%"
+DisableSetting: "&7%player% &c禁用了 %setting%"
+
+# 组队聊天
+PartyChat: "&9&l组队 &8» &7%player%&r: %message%"
+PartyChatMute: "&c该组队频道已禁言"
+
+# 组队禁言
+EnableMuteTitle: "&c此组队现在已被禁言"
+EnableMute: "&e仅限队长, 副队长和工作人员可以使用组队聊天"
+DisableMute: "&a组队频道已解除禁言"

@@ -1,0 +1,8 @@
+# 调试模式
+DebugMode: false
+
+# 更新检查
+CheckUpdate: true
+
+# 自动下载
+AutoDownload: true
