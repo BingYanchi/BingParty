@@ -24,6 +24,14 @@ public class PartyCommand implements CommandExecutor {
 			case "order":
 				MemberSort.ChangeOrder(player);
 				break;
+			case "search":
+				if (args.length > 2) return false;
+				if (args.length == 2) {
+					MemberSort.ChangeSearch(player, args[1]);
+				} else {
+					MemberSort.ChangeSearch(player);
+				}
+				break;
 			case "anvil":
 				if (args.length != 2) return false;
 				switch(args[1]) {

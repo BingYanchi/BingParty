@@ -75,6 +75,12 @@ public class PAPIHook extends PlaceholderExpansion {
         				}
         			case "SortOrder":
         				return Party.Gui.get("SortOrder").replace("%order%", MemberSort.PlayerOrder.get(player.getName()) ? Party.Gui.get("OrderDefault") : Party.Gui.get("OrderReverse"));
+					case "SerrchNotFoundInfo":
+						if (MemberSort.PlayerSort.containsKey(player.getName())) {
+							return Party.Gui.get("SerrchNotFoundInfo").replace("%word%", MemberSort.PlayerSearch.get(player.getName()));
+						} else {
+							return "Error";
+						}
         			default:
         				return Party.Gui.get(type[1]);
         		}
@@ -82,22 +88,13 @@ public class PAPIHook extends PlaceholderExpansion {
         	case "size":
         		if (type.length == 1) {
         			if (Party.PlayerParty.containsKey(player.getName())) {
-            			Integer PartyID = Party.PlayerParty.get(player.getName());
-            			return String.valueOf(PartyEvent.GetAllMember(PartyID, true).size());
+            			int PartySize = MemberSort.MemberSort.get(player.getName()).size();
+            			if (MemberSort.PlayerSearch.containsKey(player.getName()) && PartySize == 0) {
+							PartySize = -1;
+						}
+            			return String.valueOf(PartySize);
             		}
             		return "0";
-        		} else if (type.length == 2){
-        			int Num = Integer.parseInt(type[1]);
-        			if (Party.PlayerParty.containsKey(player.getName())) {
-        				Integer PartyID = Party.PlayerParty.get(player.getName());
-        				if (PartyEvent.GetAllMember(PartyID, true).size() >= Num) {
-        					return "true";
-        				} else {
-        					return "false";
-        				}
-        			} else {
-        				return null;
-        			}
         		}
         		return null;
         	// 获取指定位置的成员信息
@@ -141,6 +138,20 @@ public class PAPIHook extends PlaceholderExpansion {
         			return Party.PlayerRole.get(player.getName());
         		}
         		return null;
+        	// 是否处于搜索模式
+			case "search":
+				if (MemberSort.PlayerSearch.containsKey(player.getName())) {
+					return "true";
+				} else {
+					return "false";
+				}
+			// 获取是否在组队
+			case "party":
+				if (Party.PlayerParty.containsKey(player.getName())) {
+					return "true";
+				} else {
+					return "false";
+				}
         }
 
         // We return null if an invalid placeholder (f.e. %someplugin_placeholder3%) 

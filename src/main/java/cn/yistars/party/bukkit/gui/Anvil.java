@@ -15,11 +15,13 @@ public class Anvil {
                         case "invite": case "kick":
                             String Command = "party " + command + " " + playerText;
                             BungeeChannelManager.sendPluginMessage(p, "PlayerCommand", Command);
-                            break;
+                            return AnvilGUI.Response.close();
                         case "search":
-                            break;
+                            p.chat("/party search " + playerText);
+                            return AnvilGUI.Response.close();
+                        default:
+                            return AnvilGUI.Response.close();
                     }
-                    return AnvilGUI.Response.close();
                 })
                 .text(text)
                 .itemLeft(new ItemStack(Material.PAPER))
