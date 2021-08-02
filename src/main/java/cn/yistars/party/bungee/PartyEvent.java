@@ -12,7 +12,7 @@ import net.md_5.bungee.api.event.ServerConnectEvent;
 public class PartyEvent {
 	
 	// 更新所有信息
-	public static void SendAllPartyUpdate (ProxiedPlayer player) {
+	public static void SendAllPartyUpdate (ProxiedPlayer player, String... args) {
 		ChannelSender.SendUpdateRank(player);
 		ChannelSender.SendUpdateOnlineStat(player);
 		ChannelSender.SendUpdatePlayerUUID(player);
@@ -23,15 +23,19 @@ public class PartyEvent {
 		ChannelSender.SendUpdatePartyMod(player);
 		ChannelSender.SendUpdatePartyMember(player);
 		ChannelSender.SendUpdatePlayerRole(player);
+		if (args.length != 0) {
+			ChannelSender.SendUpdateGui(player);
+			ChannelSender.SendUpdateMessages(player);
+		}
 	}
 	
 	// 向所有服务器更新信息
-	public static void SendAllServerUpdate() {
+	public static void SendAllServerUpdate(String... args) {
 		ArrayList<String> ServerList = new ArrayList<>();
 		for (ProxiedPlayer player : ProxyServer.getInstance().getPlayers()) {
 			String Server = player.getServer().getInfo().getName();
 			if (!ServerList.contains(Server)) {
-				SendAllPartyUpdate(player);
+				SendAllPartyUpdate(player, args);
 				ServerList.add(Server);
 			}
 		}

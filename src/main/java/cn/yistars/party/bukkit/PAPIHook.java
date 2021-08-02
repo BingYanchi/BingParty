@@ -56,11 +56,10 @@ public class PAPIHook extends PlaceholderExpansion {
         }
         
         String[] type = identifier.split(",");
-        // %someplugin_placeholder1%
         switch (type[0]) {
         	// 获取语言文件
         	case "lang":
-        		if (type.length != 2) return null;
+        		if (type.length < 2) return null;
         		switch (type[1]) {
         			case "SortCurrent":
         				switch (MemberSort.PlayerSort.get(player.getName())) {
@@ -81,7 +80,13 @@ public class PAPIHook extends PlaceholderExpansion {
 						} else {
 							return "Error";
 						}
-        			default:
+					case "KickPlayerSubTitle":
+						if (type.length != 3) return null;
+						return Party.Gui.get("KickPlayerSubTitle").replace("%player%", type[2]);
+					case "PromotePlayerSubTitle":
+						if (type.length != 3) return null;
+						return Party.Gui.get("PromotePlayerSubTitle").replace("%player%", type[2]);
+					default:
         				return Party.Gui.get(type[1]);
         		}
         	// 判断组队人数
@@ -100,12 +105,22 @@ public class PAPIHook extends PlaceholderExpansion {
         	// 获取指定位置的成员信息
         	case "member":
         		if (!(type.length == 3)) return null;
-        		int Num = Integer.parseInt(type[1]);
-        		if (!MemberSort.MemberSort.containsKey(player.getName())) {
-        			System.out.println("找不到");
-        			return null;
-        		}
-        		String MemberName = MemberSort.MemberSort.get(player.getName()).get(Num);
+        		if (!Party.PlayerParty.containsKey(player.getName())) return null;
+        		String MemberName;
+        		try {
+					int Num = Integer.parseInt(type[1]);
+					if (!MemberSort.MemberSort.containsKey(player.getName())) {
+						return null;
+					}
+					MemberName = MemberSort.MemberSort.get(player.getName()).get(Num);
+				} catch (NumberFormatException e) {
+					if (!MemberSort.MemberSort.get(player.getName()).contains(type[1])) {
+						return null;
+					}
+					MemberName = type[1];
+				}
+        		if (MemberName == null) return null;
+
         		// 判别类型
         		switch (type[2]) {
         			case "MemberLevel":

@@ -23,6 +23,7 @@ public class PartyAdminCommand implements CommandExecutor {
 		System.out.println(PartyEvent.GetAllMember(0, true));
 		System.out.println(MemberSort.MemberSort);
 		System.out.println(Party.PlayerServer);
+		System.out.println(Party.Gui);
 		return true;
 	}
 

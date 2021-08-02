@@ -26,7 +26,7 @@ implements TabExecutor {
 				//ProxiedPlayer player = (ProxiedPlayer) sender;
 				if (args[0].equalsIgnoreCase("reload")) {
 					Party.readConfig();
-					PartyEvent.SendAllServerUpdate();
+					PartyEvent.SendAllServerUpdate("lang");
 					String msg = Party.Messages.get("Reload");
 					if (!(msg == null || msg.length() <= 0)) {
 		        		msg = ChatColor.translateAlternateColorCodes('&', msg);
