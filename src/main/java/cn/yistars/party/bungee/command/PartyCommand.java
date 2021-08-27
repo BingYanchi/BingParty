@@ -2,7 +2,7 @@ package cn.yistars.party.bungee.command;
 
 import cn.yistars.party.bungee.Party;
 import cn.yistars.party.bungee.PartyEvent;
-import cn.yistars.party.bungee.SupiryRank;
+import cn.yistars.party.bungee.addon.SupiryRank;
 import cn.yistars.party.bungee.channel.ChannelSender;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;

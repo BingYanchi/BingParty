@@ -17,7 +17,7 @@ extends Command
 implements TabExecutor {
 
 	public PartyAdminCommand() {
-        super("partysystem", "partysystem.admin");
+        super("bingparty", "bingparty.admin");
    }
 	
 	@Override
@@ -59,14 +59,14 @@ implements TabExecutor {
 				}
 			}
 		
-		String msg = "&aPartySystem v%version% By Bing_Yanchi".replace("%version%", Party.getInstance().getDescription().getVersion());
+		String msg = "&aBingParty v%version% By Bing_Yanchi".replace("%version%", Party.getInstance().getDescription().getVersion());
 		msg = ChatColor.translateAlternateColorCodes('&', msg);
 		sender.sendMessage(new TextComponent(msg));
 			
-		msg = "&ePlugin Page: https://www.spigotmc.org/resources/bungeekick.89845/";
+		msg = "&ePlugin Page: https://www.spigotmc.org/resources/partysystem.94456/";
 		msg = ChatColor.translateAlternateColorCodes('&', msg);
 		TextComponent message = new TextComponent(msg);
-		message.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.spigotmc.org/resources/bungeekick.89845/"));
+		message.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.spigotmc.org/resources/partysystem.94456/"));
 			
 		sender.sendMessage(new TextComponent(message));
 		//sender.sendMessage(new ComponentBuilder ("BungeeHub v%version% By Bing_Yanchi").color(ChatColor.GREEN).create());	

@@ -1,12 +1,20 @@
-name: PartySystem
+name: ${project.name}
 main: cn.yistars.party.bukkit.Party
 version: ${project.version}
 author: Bing_Yanchi
 
-softdepend: [BedWars1058]
+softdepend:
+  - BedWars1058
+  - BedWarsProxy
+  - Arcade
+  - HideAndSeek
+  - TowerDefense
+  - SkyWarsReloaded
+  - DragonEscape
+  - SpeedBuilders
 
 commands:
   party:
-    description: PartySystem.
-  partysystem:
-    description: PartySystem.
+    description: BingParty.
+  bingparty:
+    description: BingParty.

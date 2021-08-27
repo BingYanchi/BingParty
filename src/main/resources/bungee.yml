@@ -1,4 +1,4 @@
-name: PartySystem
+name: ${project.name}
 main: cn.yistars.party.bungee.Party
 version: ${project.version}
 author: Bing_Yanchi

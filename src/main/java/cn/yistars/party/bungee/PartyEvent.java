@@ -2,6 +2,7 @@ package cn.yistars.party.bungee;
 
 import java.util.ArrayList;
 
+import cn.yistars.party.bungee.addon.SupiryRank;
 import cn.yistars.party.bungee.channel.ChannelSender;
 import cn.yistars.party.bungee.command.PartyCommand;
 import net.md_5.bungee.api.ProxyServer;

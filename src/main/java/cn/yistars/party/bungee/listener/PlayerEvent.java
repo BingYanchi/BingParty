@@ -1,5 +1,9 @@
-package cn.yistars.party.bungee;
+package cn.yistars.party.bungee.listener;
 
+import cn.yistars.party.bungee.Party;
+import cn.yistars.party.bungee.PartyEvent;
+import cn.yistars.party.bungee.PartyTimer;
+import cn.yistars.party.bungee.addon.SupiryRank;
 import cn.yistars.party.bungee.channel.ChannelSender;
 import cn.yistars.party.bungee.command.PartyCommand;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
@@ -25,6 +29,7 @@ public class PlayerEvent implements Listener {
     		PartyEvent.UpdatePlayerServer(event.getPlayer());
     		PartyEvent.SendAllServerUpdate();
     	}
+		Party.PlayerLastTime.remove(event.getPlayer().getName());
     }
     
 	@EventHandler

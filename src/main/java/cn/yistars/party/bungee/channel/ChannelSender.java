@@ -14,7 +14,7 @@ public class ChannelSender {
 	// 新增组队
 	public static void SendAddParty(Integer PartyID, ProxiedPlayer player) {
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("AddParty");
 		out.writeInt(PartyID);
@@ -25,7 +25,7 @@ public class ChannelSender {
 	// 移除组队
 	public static void SendRemoveParty(Integer PartyID, ProxiedPlayer player, String leadername) {
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("RemoveParty");
 		out.writeInt(PartyID);
@@ -36,7 +36,7 @@ public class ChannelSender {
 	// 组队增加成员
 		public static void SendAddMember(Integer PartyID, ProxiedPlayer player, String playername) {
 			ByteArrayDataOutput out = ByteStreams.newDataOutput();
-			out.writeUTF("PartySystem");
+			out.writeUTF("BingParty");
 			
 			out.writeUTF("AddMember");
 			out.writeInt(PartyID);
@@ -50,7 +50,7 @@ public class ChannelSender {
 	// 组队移除成员
 	public static void SendRemoveMember(Integer PartyID, ProxiedPlayer player, String playername) {
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("RemoveMember");
 		out.writeInt(PartyID);
@@ -78,7 +78,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdateRank");
 		out.writeUTF(Str.toString());
@@ -96,7 +96,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdateOnlineStat");
 		out.writeUTF(Str.toString());
@@ -114,7 +114,7 @@ public class ChannelSender {
 		}
 
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePlayerUUID");
 		out.writeUTF(Str.toString());
@@ -132,7 +132,7 @@ public class ChannelSender {
 		}
 
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePlayerLastTime");
 		out.writeUTF(Str.toString());
@@ -150,7 +150,7 @@ public class ChannelSender {
 		}
 
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePlayerServer");
 		out.writeUTF(Str.toString());
@@ -168,7 +168,7 @@ public class ChannelSender {
 		}
 
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePlayerRole");
 		out.writeUTF(Str.toString());
@@ -186,7 +186,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePartyLeader");
 		out.writeUTF(Str.toString());
@@ -204,7 +204,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePlayerParty");
 		out.writeUTF(Str.toString());
@@ -229,7 +229,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePartyMod");
 		out.writeUTF(Str.toString());
@@ -254,7 +254,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdatePartyMember");
 		out.writeUTF(Str.toString());
@@ -281,7 +281,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdateMessages");
 		out.writeUTF(Str.toString());
@@ -300,7 +300,7 @@ public class ChannelSender {
 		}
 		
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PartySystem");
+		out.writeUTF("BingParty");
 		
 		out.writeUTF("UpdateGui");
 		out.writeUTF(Str.toString());

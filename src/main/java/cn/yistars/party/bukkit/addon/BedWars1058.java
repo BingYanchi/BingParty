@@ -18,7 +18,7 @@ public class BedWars1058 implements Listener {
 	BedWars bedwarsAPI = Objects.requireNonNull(Bukkit.getServicesManager().getRegistration(BedWars.class)).getProvider();
 	
 	@EventHandler
-	public void onAddParty(AddPartyEvent event) {
+	private void onAddParty(AddPartyEvent event) {
 		//System.out.println("检测到 AddPartyEvent");
 		Player Leader = event.getLeader();
 		if (Leader != null) {
@@ -27,7 +27,7 @@ public class BedWars1058 implements Listener {
 	}
 	
 	@EventHandler
-	public void onRemoveParty(RemovePartyEvent event) {
+	private void onRemoveParty(RemovePartyEvent event) {
 		Player Leader = Bukkit.getPlayer(event.getLeaderName());
 		if (Leader != null) {
 			bedwarsAPI.getPartyUtil().disband(Leader);
@@ -35,7 +35,7 @@ public class BedWars1058 implements Listener {
 	}
 	
 	@EventHandler
-	public void onAddMember(AddMemberEvent event) {
+	private void onAddMember(AddMemberEvent event) {
 		//System.out.println("检测到 AddMemberEvent");
 		Player Member = Bukkit.getPlayer(event.getPlayerName());
 		Player Leader = Bukkit.getPlayer(event.getLeaderName());
@@ -45,7 +45,7 @@ public class BedWars1058 implements Listener {
 	}
 	
 	@EventHandler
-	public void onRemoveMember(RemoveMemberEvent event) {
+	private void onRemoveMember(RemoveMemberEvent event) {
 		Player Member = Bukkit.getPlayer(event.getPlayerName());
 		if (Member != null) {
 			bedwarsAPI.getPartyUtil().removeFromParty(Member);

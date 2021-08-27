@@ -13,6 +13,7 @@ import cn.yistars.party.bungee.channel.ChannelListener;
 import cn.yistars.party.bungee.command.PartyAdminCommand;
 import cn.yistars.party.bungee.command.PartyChat;
 import cn.yistars.party.bungee.command.PartyCommand;
+import cn.yistars.party.bungee.listener.PlayerEvent;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
@@ -22,14 +23,12 @@ import net.md_5.bungee.config.YamlConfiguration;
 public class Party extends Plugin {
 	public static Party instance;
 	public static boolean DebugMode;
-	public static boolean CheckUpdate = true;
 	public static Integer PartyID = 0;
 	public static Integer OfflineID = 0;
 	public static Integer PartyInviteWait = 60;
 	public static Integer OfflineKick = 5;
 	public static Integer LeaderOfflineKick = 5;
 	public static ArrayList<String> Staff = new ArrayList<>();
-	//public static List<String> ForceWarp = new ArrayList<String>();
 	public static List<String> BlackWarp = new ArrayList<>();
 	public static HashMap<String, Integer> GameServer = new HashMap<>();
 	public static HashMap<String, Integer> PlayerOffline = new HashMap<>();
@@ -50,12 +49,12 @@ public class Party extends Plugin {
 	public static HashMap<String, String> Messages = new HashMap<>();
 	public static HashMap<String, String> Gui = new HashMap<>(); // 传递子服
 	public static HashMap<String, String> Server = new HashMap<>();
-	public static Logger logger = Logger.getLogger("PartySystem");
+	public static Logger logger = Logger.getLogger("BingParty");
 	
 	@Override
 	public void onEnable() {
 		instance = this;
-		ProxyServer.getInstance().registerChannel("PartySystem");
+		ProxyServer.getInstance().registerChannel("BingParty");
 		
 		readConfig();
 		
@@ -65,7 +64,7 @@ public class Party extends Plugin {
 		
 		getProxy().getPluginManager().registerListener(this, new PlayerEvent());
 		getProxy().getPluginManager().registerListener(this, new ChannelListener());
-		getProxy().getPluginManager().registerListener(this, new UpdateChecker());
+		//getProxy().getPluginManager().registerListener(this, new UpdateChecker());
 		
 		new Metrics(this,12128);
         
@@ -76,8 +75,8 @@ public class Party extends Plugin {
 		ProxyServer.getInstance().getPluginManager().unregisterCommands(this);
 		getProxy().getPluginManager().unregisterListener(new PlayerEvent());
 		getProxy().getPluginManager().unregisterListener(new ChannelListener());
-		getProxy().getPluginManager().unregisterListener(new UpdateChecker());
-		ProxyServer.getInstance().unregisterChannel("PartySystem");
+		//getProxy().getPluginManager().unregisterListener(new UpdateChecker());
+		ProxyServer.getInstance().unregisterChannel("BingParty");
 		Party.logger.info(Messages.get("Disenabled"));
 	}
 	
@@ -136,7 +135,6 @@ public class Party extends Plugin {
 			PartyInviteWait = config.getInt("PartyInviteWait");
 			OfflineKick = config.getInt("OfflineKick");
 			LeaderOfflineKick = config.getInt("LeaderOfflineKick");
-
 			BlackWarp = config.getStringList("BlackWarp");
 			
 			for (String num : config.getSection("GameServer").getKeys()) {

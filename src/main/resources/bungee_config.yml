@@ -1,9 +1,6 @@
 # 调试模式
 DebugMode: false
 
-# 更新检查
-CheckUpdate: true
-
 # 组队邀请等待时间 (秒)
 PartyInviteWait: 120
 

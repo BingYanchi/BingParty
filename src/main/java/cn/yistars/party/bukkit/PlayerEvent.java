@@ -1,5 +1,7 @@
 package cn.yistars.party.bukkit;
 
+import cn.yistars.party.bukkit.addon.Arcade;
+import cn.yistars.party.bukkit.addon.TowerDefense;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

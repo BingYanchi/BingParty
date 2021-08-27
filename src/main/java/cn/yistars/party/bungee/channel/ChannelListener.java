@@ -1,8 +1,11 @@
 package cn.yistars.party.bungee.channel;
 
+import cn.yistars.party.bungee.command.PartyCommand;
 import net.md_5.bungee.api.ProxyServer;
+import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.PluginMessageEvent;
+import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
@@ -31,7 +34,7 @@ public class ChannelListener implements Listener {
         		String playername = player.getName();
         		
                 if (!subchannel.equalsIgnoreCase("PlayerCount")) {
-                	 System.out.println(subchannel);
+                	 //System.out.println(subchannel);
                 }
                 
                 if (subchannel.equalsIgnoreCase("Connect")) {
@@ -41,19 +44,31 @@ public class ChannelListener implements Listener {
                 	}
                 }
                 
-                if (subchannel.equalsIgnoreCase("PartySystem")) {
+                if (subchannel.equalsIgnoreCase("BingParty")) {
 
                     String type = dis.readUTF();
-                    System.out.println(type);
+                    //System.out.println(type);
                     
             		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-            		out.writeUTF("PartySystem");
+            		out.writeUTF("BingParty");
                     
                     switch (type) {
                     	case "PlayerCommand":
                         	String command = dis.readUTF();
                         	ProxyServer.getInstance().getPluginManager().dispatchCommand(player, command);
-                    		break;
+                    		return;
+						case "SendMessage":
+							String msg = dis.readUTF();
+							PartyCommand.SendMessage(player, msg);
+							return;
+						case "SendServer":
+							String sendname = dis.readUTF();
+							ServerInfo server = player.getServer().getInfo();
+							ProxiedPlayer send = ProxyServer.getInstance().getPlayer(sendname);
+							if (send != null) {
+								send.connect(server, ServerConnectEvent.Reason.PLUGIN);
+							}
+							return;
                     	case "CheckInParty":
                     	    out.writeUTF("CheckInParty");
                     	    out.writeBoolean(Party.PlayerParty.containsKey(playername));

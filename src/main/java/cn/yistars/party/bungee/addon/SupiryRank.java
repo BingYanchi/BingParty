@@ -1,4 +1,4 @@
-package cn.yistars.party.bungee;
+package cn.yistars.party.bungee.addon;
 
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 

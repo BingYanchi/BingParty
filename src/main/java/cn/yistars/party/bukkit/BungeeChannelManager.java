@@ -27,10 +27,8 @@ public class BungeeChannelManager implements PluginMessageListener {
         		ByteArrayDataInput in = ByteStreams.newDataInput(message);
         		String subchannel = in.readUTF();
         		
-        		if (subchannel.equals("PartySystem")) {
+        		if (subchannel.equals("BingParty")) {
         			String type = in.readUTF();
-        			// TODO
-        			System.out.println(type);
         			switch (type) {
         				// 更新语言文件
         				case "UpdateMessages":
@@ -193,7 +191,7 @@ public class BungeeChannelManager implements PluginMessageListener {
     	
         if (player != null) {
             ByteArrayDataOutput out = ByteStreams.newDataOutput();
-            out.writeUTF("PartySystem");
+            out.writeUTF("BingParty");
             for (String arg : args) {
                 if (arg != null) {
                     out.writeUTF(arg);
